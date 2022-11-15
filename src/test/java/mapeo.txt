@@ -1,0 +1,20 @@
+Entrar a la pagina
+
+textbox login --> id = "login"
+escribir correo
+Enter
+assert --> xpath = "//div[contains(@class, 'ycptalias')]"
+
+apretar mensaje nuevo --> id = "newmail"
+textbox destino mismo correo --> frame = "ifmail", id = "msgto"
+textbox asunto --> id = "msgsubject"
+textbox cuerpo --> id = "msgbody"
+boton enviar mensaje --> id = "msgsend"
+* assert --> pop msg --> id = "msgpopmsg"
+boton actualizar --> switch to default content --> id = "refresh"
+switch frame --> frameid = "ifinbox"
+assert comparar asuntos o correos --> xpath = "//div[contains(@class, 'lms')]" asunto
+                                  --> xpath = "//span[contains(@class, 'lmf')]" correo
+
+
+
